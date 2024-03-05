@@ -1,0 +1,434 @@
+/* whole body CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* primary colors of Website deduced from DCAirways Logo */
+:root {
+  --blue: #00afb9;
+  --teal-green: rgba(70, 143, 175, 0.5);
+  --maroon: #8c2f39;
+  --grey-background: #e9ecef;
+}
+
+/* universal classes */
+.background {
+  background-color: var(--grey-background);
+}
+
+.btn-color {
+  background-color: var(--maroon);
+}
+
+.button {
+  background-color: var(--maroon);
+  color: #fff;
+  outline: 2px solid #990033;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--maroon);
+}
+
+/* ...........Nav & Footer Section........... */
+/* Nav Section */
+.logo {
+  width: 25px;
+}
+
+.headerbg {
+  background-color: var(--blue);
+}
+
+.dc-name {
+  font-family: "Domine", serif;
+  color: #120505;
+}
+
+@media (max-width: 598px) {
+  .btn-nav {
+    display: none;
+  }
+
+  .fa-bars {
+    font-size: 22px;
+  }
+
+  .dc-name {
+    font-size: 18px;
+  }
+}
+
+.btn-color {
+  background-color: #8c2f39;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--maroon);
+}
+
+.footer-text {
+  font-size: small;
+}
+
+.footer-links {
+  list-style: none;
+  text-decoration: none;
+}
+
+.footerlinks {
+  font-size: 12px;
+}
+
+.footerlinks:hover {
+  border-bottom: 2px solid #fff3d1;
+  transition: all 0.1s ease-in-out 0.1s;
+}
+
+
+/* Header Carousel */
+.img-div {
+  height: 90vh;
+}
+
+.img-head {
+  overflow: hidden;
+  object-fit: cover;
+}
+
+h1 {
+  color: #8c2f39;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* About Section */
+.about {
+  background-color: #fff;
+}
+
+.about-h4 {
+  color: #8c2f39;
+}
+
+.about-txt {
+  font-family: "Domine", serif;
+}
+
+.about-side {
+  color: #990033;
+  font-family: "Cookie", cursive;
+  font-size: 40px;
+}
+
+.pillar-icons {
+  font-weight: 600;
+  padding: 5px;
+}
+
+.service-time {
+  font-weight: 600;
+}
+
+.btn-outline {
+  color: #fff;
+  background-color: #8c2f39;
+  outline: 2px solid #8c2f39;
+}
+
+.btn-outline:hover {
+  color: #8c2f39;
+  background-color: transparent;
+}
+
+/* Sermom Section */
+
+.sermon {
+  background-color: #87f0f6;
+  background-color: #55c0b5;
+}
+
+.img-sermon {
+  height: 400px;
+  border-radius: 15px 0 15px 0;
+}
+
+span.asterisk {
+  color: red;
+}
+
+/* Ministries section */
+#ministries {
+  min-height: 100vh;
+  background-color: #e9ecef;
+}
+
+.grid-wrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "fellowship fellowship fellowship"
+    "men mothers teens"
+    "men youth kids";
+}
+
+.fellowship {
+  background-image: linear-gradient(rgba(8, 6, 3, 0.7), rgba(14, 12, 11, 0.5)),
+    url(/images/fellowship.jpg);
+
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  height: 400px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.men {
+  background-image: linear-gradient(rgba(7, 7, 6, 0.45), rgba(7, 3, 1, 0.8)),
+    url(/images/men.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  height: 536px;
+  width: 360px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-start;
+  padding: 1.3rem;
+  color: white;
+  transition: ease-in-out 0.5s;
+}
+
+.men:hover {
+  transform: scale(1.05);
+  color: transparent;
+  background-image: url(/images/men.jpg);
+}
+
+.card3 {
+  width: 360px;
+  height: 258px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-start;
+  padding: 1.3rem;
+}
+
+.mothers {
+  background-image: linear-gradient(rgba(32, 28, 23, 0.3),
+      rgba(14, 12, 11, 0.8)),
+    url(/images/mothers.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  color: white;
+  transition: ease-in-out 0.5s;
+}
+
+.mothers:hover {
+  transform: scale(1.05);
+  color: transparent;
+  background-image: url(/images/mothers.jpg);
+}
+
+.youth {
+  background-image: linear-gradient(rgba(19, 18, 17, 0.45), rgba(10, 5, 2, 0.8)),
+    url(/images/youth.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  transition: ease-in-out 0.5s;
+  color: white;
+}
+
+.youth:hover {
+  transform: scale(1.05);
+  color: transparent;
+  background-image: url(/images/youth.jpg);
+}
+
+.teens {
+  background-image: linear-gradient(rgba(15, 15, 14, 0.5),
+      rgba(14, 12, 11, 0.8)),
+    url(/images/teens.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  transition: ease-in-out 0.5s;
+  color: white;
+}
+
+.teens:hover {
+  transform: scale(1.05);
+  color: transparent;
+  background-image: url(/images/teens.jpg);
+}
+
+.kids {
+  background-image: linear-gradient(rgba(32, 28, 23, 0.4), rgba(5, 5, 5, 0.8)),
+    url(/images/kids.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  transition: ease-in-out 0.5s;
+  color: white;
+}
+
+.kids:hover {
+  transform: scale(1.05);
+  color: transparent;
+  background-image: url(/images/kids.jpg);
+}
+
+/* assigning the template. bc css doesn't know what fellowship /men/kids means */
+.fellowship {
+  grid-area: fellowship;
+}
+
+.men {
+  grid-area: men;
+}
+
+.mothers {
+  grid-area: mothers;
+}
+
+.teens {
+  grid-area: teens;
+}
+
+.youth {
+  grid-area: youth;
+}
+
+.kids {
+  grid-area: kids;
+}
+
+@media (max-width: 909px) {
+  .grid-wrapper {
+    grid-template-areas:
+      "fellowship fellowship "
+      "men mothers"
+      "men teens"
+      "youth kids";
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-wrapper {
+    gap: 30px;
+    padding: 0 20px 0 20px;
+    grid-template-areas:
+      "fellowship"
+      "men"
+      "mothers"
+      "teens"
+      "youth"
+      "kids";
+  }
+
+  .fellowship {
+    width: 100%;
+  }
+
+  .men {
+    width: 100%;
+    height: 360px;
+  }
+
+  .card3 {
+    width: 100%;
+  }
+}
+
+/* Giving */
+.giving {
+  background-color: rgba(70, 143, 175, 0.5);
+  background-color: #4cb1a7;
+}
+
+.malachi {
+  color: #fff;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+h6.accDetails {
+  font-size: 16px;
+}
+
+/* location & Contacts */
+.map-contacts {
+  background-color: #fff;
+}
+
+.map {
+  text-align: center;
+}
+
+iframe {
+  border-radius: 10px;
+}
+
+@media (max-width: 596px) {
+  iframe {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+.wrapper {
+  background-color: #9a4245;
+  border-radius: 7px;
+  margin: auto;
+}
+
+/* sermons page */
+.sermons {
+  background-color: #fff;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: #e9ecef;
+}
+
+/* pillars */
+.pillars {
+  background-color: rgba(70, 143, 175, 0.5);
+  background-color: #4cb1a7;
+}
+
+
+
+/* show page */
+.img-show {
+  height: 300px;
+  object-fit: cover;
+}

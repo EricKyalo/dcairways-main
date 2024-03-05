@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-----------Font Awesome icons--------->
+  <script src="https://kit.fontawesome.com/55acaa2810.js" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <!-- bootstrap cdn css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Domine:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- local css -->
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- TinyMCE for formatting text area -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tinymce/tinymce-webcomponent@2/dist/tinymce-webcomponent.min.js"></script>
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+    tinymce.init({
+      selector: '#mytextarea'
+    }); -->
+  <!-- </script> -->
+  <!-- Place the first <script> tag in your HTML's <head> -->
+  <!-- <script src="https://cdn.tiny.cloud/1/vmy1pw2hloydfmfr3sv1blaqx0h6uf9jdtwvidqf0xsyctvk/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"></script> -->
+  <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+  <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
+  <script>
+    // ClassicEditor
+    //   .create(document.querySelector('#editor'))
+    //   .catch(error => {
+    //     console.error(error);
+    //   });
+
+    ClassicEditor
+      .create(document.querySelector('#editor'), {
+        toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote'],
+        heading: {
+          options: [
+            { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+            { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+            { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
+          ]
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  </script>
+  <!-- <script>
+
+    tinymce.init({
+      forced_root_block: "",
+      force_br_newlines: false,
+      element_format: 'xhtml',
+      allow_html_in_named_anchor: false,
+      force_p_newlines: false,
+      selector: 'textarea',
+      setup: function (editor) {
+        editor.on('change', function () {
+          getcontent();
+        });
+      },
+      plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker',
+      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+    });
+  </script> -->
+
+
+  <title>Deliverance Church Airways</title>
+</head>
+
+<body>
+
+  <!-- Nav section -->
+  <nav class="navbar navbar-dark headerbg sticky-top py-3">
+    <div class="container-fluid">
+      <a class="px-2 navbar-brand dc-name" href="/">
+        <img class="logo" src="/images/dc-logo.jpg" alt="">
+        Deliverance Church Airways
+      </a>
+      <div class="d-flex align-items-center">
+        <a class="btn button about-txt" href="/#give" role="button ">Give</a>
+        <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <i class="fas fa-bars px-3 text-dark"></i>
+        </a>
+        <div class="offcanvas offcanvas-end headerbg" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="container">
+            <form class="d-flex" action="/search" method="POST">
+              <input class="form-control me-2 active" type="search" name="searchTerm" placeholder="Search Sermon"
+                aria-label="Search">
+              <button class="btn btn-outline-dark" type="submit">Search</button>
+            </form>
+          </div>
+          <div class="offcanvas-body text-dark">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="/">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="/showpage">BLOG/SERMONS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="/register">ADMIN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">ESTATE FELLOWSHIPS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="/#ministries">OUR MINISTRIES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="/#contacts">CONTACTS</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </nav>
+
+  <!-- body -->
+  <main>
+    <%- body %>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-div d-flex px-4 pt-3">
+      <a class="navbar-brand text-light footerlinks" href="/">HOME</a>
+      <a class="navbar-brand text-light footerlinks" href="/showpage">SERMONS</a>
+      <a class="navbar-brand text-light footerlinks" href="/#give">GIVE</a>
+      <a class="navbar-brand text-light footerlinks" href="/login">ADMIN</a>
+      <a class="navbar-brand text-light footerlinks" href="/#ministries">OUR MINISTRIES</a>
+      <a class="navbar-brand text-light footerlinks" href="/">FELLOWSHIPS</a>
+      <a class="navbar-brand text-light footerlinks" href="/contacts">CONTACT US</a>
+    </div>
+    <hr class="text-light">
+    <div class="text-light text-center px-4 py-2">
+      <p class="footer-text">
+        All rights reserved<br>
+        &copy; 2013 - <%= new Date().getFullYear(); %> Deliverance Church Airways <br>
+          A <a href="tel:0707898224" class="text-light">Presidens Digital</a> site
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+{
+  "name": "ackstfaith",
+  "version": "1.0.0",
+  "description": "ACK-St-Faith",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Church",
+    "ACK",
+    "St",
+    "Faith",
+    "Word",
+    "of",
+    "God",
+    "parish",
+    "sermon"
+  ],
+  "author": "Eric Kyalo",
+  "license": "MIT",
+  "engines": {
+    "node": "16.13.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cloudinary": "^2.0.2",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.0",
+    "memorystore": "^1.6.7",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.12.7",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemon": "^2.0.22",
+    "slugify": "^1.6.5",
+    "tinymce": "^6.8.2"
+  }
+}

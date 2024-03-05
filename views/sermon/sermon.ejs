@@ -1,0 +1,24 @@
+<section class="container px-4 blog h-100">
+
+
+    <div class="py-3 about-txt">
+        <h1 class="mb-4">
+            <%= sermon.title %>
+        </h1>
+        <h5>Theme of the Month: <%=sermon.reading%>
+        </h5>
+        <h6 class="text-muted pt-3">
+            <%=sermon.date%>
+        </h6>
+        <h3 class="py-3">
+            <%=sermon.preacher%>
+        </h3>
+        <p>
+            <%= sermon.sermon %>
+        </p>
+    </div>
+    <div class="mb-3">
+        <a href="/showpage" class="px-3 btn btn-primary text-light">See more Sermons</a>
+    </div>
+
+</section>

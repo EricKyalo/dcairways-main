@@ -1,0 +1,43 @@
+<section class="px-5">
+    <form class="d-flex pt-3 about-txt" action="/search" method="POST">
+        <input class="form-control me-2 active" type="search" name="searchTerm" placeholder="Search Sermon"
+            aria-label="Search">
+        <button class="btn btn-dark text-light btn-outline-dark" type="submit" required=true>Search</button>
+    </form>
+
+    <% sermon.forEach(function (sermon) { %>
+        <main class="container card sermons px-4 pb-4 mt-4 mb-4 about-txt">
+
+            <div class="row gy-4 pt-4">
+                <div class="col-md">
+                    <img src="<%= sermon.image.url %>" class="img-show img-fluid" alt="">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="mb-3 headerColor">
+                        <%= sermon.title %>
+                    </h3>
+                    <h6 class="text-muted pt">
+                        <%=sermon.date%>
+                    </h6>
+                    <h6 class="pt-3">Series: #<%=sermon.theme%>
+                    </h6>
+
+                    <h5 class="pb-3">
+                        <%=sermon.preacher%>
+                    </h5>
+                    <p class="about-txt">
+                        <% if (sermon.sermon.length>101) { %>
+                            <%= sermon.sermon.slice(0, 100) + " ..." %>
+                                <% } else { %>
+                                    <%=sermon.sermon%>
+                                        <% } %>
+                    </p>
+                    <div>
+                        <a href="/sermon" class="btn btn-outline">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <% }) %>
+</section>

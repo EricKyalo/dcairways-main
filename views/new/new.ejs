@@ -1,0 +1,73 @@
+<!-- new sermon view page -->
+<setion class="new-sermon about-txt">
+  <div class="container pt-3 pb-5 px-3">
+    <h1>New Images on Anchor Display</h1>
+    <form action="/anchorImages" method="POST" enctype="multipart/form-data">
+
+      <div class="mb-3">
+        <label for="images" class="form-label"><i>Choose a max of 3 images <span class="asterisk">(max size:
+              1mb)</span></i></label>
+        <input type="file" value="" class="form-control" id="images" name="images" aria-describedby="title" multiple>
+      </div>
+
+      <button type="submit" class="btn btn-primary mb-5">Save</button>
+
+    </form>
+
+    <h1 class="pb-3">New Sermon</h1>
+    <form action="/newSermon" method="POST" enctype="multipart/form-data">
+
+      <div class="mb-3">
+        <label for="title" class="form-label">Title<span class="asterisk">*</span></label>
+        <input type="text" value="" class="form-control" id="title" name="title" aria-describedby="title" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="series" class="form-label">Series: #</label>
+        <input type="text" value="" class="form-control" id="series" name="series" aria-describedby="series">
+      </div>
+
+      <div class="mb-3">
+        <label for="sermonImage" class="form-label">Snapshot</label>
+        <input type="file" value="" class="form-control" id="sermonImage" name="image">
+      </div>
+
+      <div class="mb-3">
+        <label for="reading" class="form-label">Reading</label>
+        <input type="text" value="" class="form-control" id="reading" name="reading">
+      </div>
+
+      <div class="mb-3">
+        <label for="date" class="form-label">Date<span class="asterisk">*</span></label>
+        <input type="date" value="" class="form-control" id="date" name="date" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="preacher" class="form-label">Preacher<span class="asterisk">*</span></label>
+        <input type="text" value="" class="form-control" id="preacher" name="preacher" aria-describedby="preacher"
+          required>
+      </div>
+
+      <div class="mb-3" id="editor">
+        CKEditor
+        <!-- <label for="sermon" class="form-label">Sermon<span class="asterisk">*</span></label>
+        <textarea name="sermon" class="form-control" id="sermon" name="sermon"> </textarea> -->
+      </div>
+
+      <!-- <div class="mb-3">
+        <label for="sermon" class="form-label">Sermon<span class="asterisk">*</span></label>
+
+        <textarea name="sermon" class="form-control" id="mytextarea" required></textarea>
+      </div> -->
+
+      <button type="submit" class="btn btn-primary">Save</button>
+
+    </form>
+
+    <div class="mt-4">
+      <a href="/admin" class="btn btn-warning">Manage Sermons</a>
+      <a href="/logout" class="btn btn-danger mx-2">Log Out</a>
+    </div>
+
+  </div>
+  </section>
